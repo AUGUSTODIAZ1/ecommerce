@@ -1,0 +1,44 @@
+* {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins";
+}
+
+.page_404 {
+    padding: 40px 0;
+    background: #000000;
+    font-family: "poppins";
+}
+
+.bg {
+    background: url(/Images/error-ecomm.gif);
+    height: 500px;
+    background-position: center;
+}
+
+.h2 {
+    color: #c5c0c0;
+    font-size: 40px;
+}
+
+p {
+    color: #c5c0c0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #7d7d97;
+    display: inline-block;
+    border-radius: 50px;
+}
+
+a:hover {
+    color: #000000;
+}
+.content_box_404 {
+    margin-top: -70px;
+}
