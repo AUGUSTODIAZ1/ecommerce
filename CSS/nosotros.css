@@ -12,7 +12,7 @@ html{
 /* SECCION INICIO */
 .inicio{
     background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url("images/imgprog.jpg");
+    url("/Images/imgprog.jpg");
     background-size: cover;
     background-position: center center;
     color: #ffffff;
@@ -29,7 +29,7 @@ html{
 /* menu lateral */
 .inicio .contenido-seccion header nav{
     position: fixed;
-    margin-left: 55px;
+    margin-inline-start: -37px;
     background-color: #1e3566;
     padding: 15px;
     border-radius: 10px;
@@ -181,7 +181,7 @@ img {
     padding: 80px 0 100px 0;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url("images/img-codigo.jpg");
+    url("/Images/img-codigo.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
