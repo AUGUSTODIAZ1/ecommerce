@@ -1,5 +1,5 @@
 //Menu lateral
-var menu_visible = false;
+let menu_visible = false;
 let menu = document.getElementById("nav");
 function mostrarOcultarMenu(){
     if(menu_visible==false){
@@ -13,7 +13,7 @@ function mostrarOcultarMenu(){
 }
 //oculto el menu una vez que selecciono una opción
 let links = document.querySelectorAll("nav a");
-for(var x = 0; x <links.length;x++){
+for(let x = 0; x <links.length;x++){
     links[x].onclick = function(){
         menu.style.display = "none";
         menu_visible = false;
@@ -50,8 +50,8 @@ let entro = false;
 
 //función que aplica las animaciones de la habilidades
 function efectoHabilidades(){
-    var habilidades = document.getElementById("habilidades");
-    var distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
+    let habilidades = document.getElementById("habilidades");
+    let distancia_skills = window.innerHeight - habilidades.getBoundingClientRect().top;
     if(distancia_skills>=300 && entro==false){
         entro = true;
         const intervalHtml = setInterval(function(){
