@@ -39,7 +39,7 @@ crearBarra(Boostrap);
 let Git = document.getElementById("git");
 crearBarra(Git);
 let css = document.getElementById("Css");
-crearBarra(Css);
+crearBarra(css);
 let react = document.getElementById("react");
 crearBarra(react);
 

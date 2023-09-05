@@ -7,6 +7,7 @@
 }
 html{
     scroll-behavior: smooth;
+    /* width: 100%; */
 }
 
 /* SECCION INICIO */
@@ -349,8 +350,33 @@ img {
     .contacto .contenido-seccion .fila{
         display: block;
     }
+    .descripcion {
+        font-size: 10px;
+        padding-left: 8px
+    }
 }
-
+@media screen and (max-width:1224px){
+    .habilidades .contenido-seccion .fila .col .cont-barra{
+        display:inline-flexbox;
+        justify-content:center;
+    }
+}
+@media screen and (max-width:394px){
+    .habilidades .contenido-seccion .fila .col .cont-barra{
+        display: block;
+    }
+}
+@media screen and (max-width:288px){
+    .resumen .contenido-seccion .info .col table .descripcion{
+        padding:5px;
+    }
+}
+@media screen and (max-width: 408px){
+    .habilidades .contenido-seccion .fila .col{
+    width: 100%;
+    text-align: center;
+}
+}
 .rating {
     display: flex;
     justify-content: center;
@@ -437,3 +463,9 @@ img {
       fill: var(--fill);
     }
   }
+
+  @media screen and (max-width:412px) {
+    .inicio .contenido-seccion .info h1{
+       font-size: revert;
+    }
+}
