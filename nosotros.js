@@ -22,7 +22,7 @@ for(let x = 0; x <links.length;x++){
 
 //Creo las barritas de una barra particular identificada por su id
 function crearBarra(id_barra){
-    for(i=0;i<=16;i++){
+    for(i=0;i<=14;i++){
         let div = document.createElement("div");
         div.className = "e";
         id_barra.appendChild(div);
@@ -55,19 +55,19 @@ function efectoHabilidades(){
     if(distancia_skills>=300 && entro==false){
         entro = true;
         const intervalHtml = setInterval(function(){
-            pintarBarra(html, 16, 0, intervalHtml);
+            pintarBarra(html, 14, 0, intervalHtml);
         },100);
         const intervalJavascript = setInterval(function(){
-            pintarBarra(javascript, 9, 1, intervalJavascript);
+            pintarBarra(javascript, 8, 1, intervalJavascript);
         },100);
         const intervalBoostraps = setInterval(function(){
-            pintarBarra(Boostrap, 16, 2, intervalBoostraps);
+            pintarBarra(Boostrap, 14, 2, intervalBoostraps);
         },100);
         const intervalGit = setInterval(function(){
-            pintarBarra(Git, 15, 3, intervalGit);
+            pintarBarra(Git, 13, 3, intervalGit);
         },100);
         const intervalCss = setInterval(function(){
-            pintarBarra(css, 16, 4, intervalCss);
+            pintarBarra(css, 14, 4, intervalCss);
         },100);
         const intervalreact = setInterval(function(){
             pintarBarra(react, 1, 5, intervalreact);
