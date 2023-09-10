@@ -69,6 +69,7 @@ footer{
     margin-bottom: 30px;
     color: #343434;
     font-weight: 700;
+    text-align: -webkit-auto;
 }
 
 .box__footer a{
