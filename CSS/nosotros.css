@@ -29,8 +29,9 @@ html{
 }
 /* menu lateral */
 .inicio .contenido-seccion header nav{
-    position: fixed;
+    position: absolute;
     margin-inline-start: -37px;
+    margin-top: 2px;
     background-color: #1e3566;
     padding: 15px;
     border-radius: 10px;
