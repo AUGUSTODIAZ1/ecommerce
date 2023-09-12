@@ -5,7 +5,7 @@
   --gradient5: linear-gradient(to right, #EFF3F5, #0051ff46, #EFF3F5, #4790b4b1, #0051ff46, #EFF3F5, #EFF3F5, #0051ff46, #EFF3F5, #EFF3F5, #0051ff46, #EFF3F5);
   --gradient1: linear-gradient(to right, #1d35576f, #7A6EFF );
   --gradientNavbar: linear-gradient(to bottom , #00159b, #001EE0);
-  --gradientMain: linear-gradient(to bottom , #fff,#82a7d1, #001ee0b7, #7A6EFF, #001EE0, #00159b,  #00159b, #00159b, #ffffff);
+  --gradientMain: linear-gradient(to bottom , #fff,#82a7d1, #001ee0b7, #7A6EFF, #1b2fafda, #00159b,  #0f24adcb, #2d3fb4, #ffffff);
   --gradientBody: linear-gradient(to bottom, #001EE0, #001EE0, #00138f);
 }
 
