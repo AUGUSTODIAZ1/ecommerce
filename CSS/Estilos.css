@@ -53,7 +53,7 @@ footer{
     display: block;
   }
   
-  @media screen and (max-width: 1357px) {
+  @media screen and (max-width: 1449px) {
     .logo {
       display: none;
     }
