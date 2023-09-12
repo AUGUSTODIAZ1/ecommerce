@@ -5,7 +5,7 @@
   --gradient5: linear-gradient(to right, #EFF3F5, #0051ff46, #EFF3F5, #4790b4b1, #0051ff46, #EFF3F5, #EFF3F5, #0051ff46, #EFF3F5, #EFF3F5, #0051ff46, #EFF3F5);
   --gradient1: linear-gradient(to right, #1d35576f, #7A6EFF );
   --gradientNavbar: linear-gradient(to bottom , #00159b, #001EE0);
-  --gradientMain: linear-gradient(to bottom , #EFF3F5, #001EE0, #001ee0b7, #7A6EFF, #001EE0, #00159b,  #00159b, #00159b, #00159b);
+  --gradientMain: linear-gradient(to bottom , #fff,#82a7d1, #001ee0b7, #7A6EFF, #001EE0, #00159b,  #00159b, #00159b, #ffffff);
   --gradientBody: linear-gradient(to bottom, #001EE0, #001EE0, #00138f);
 }
 
@@ -42,7 +42,7 @@ a {
   width: 100%;
   /* min-height: ; */
   height: 100px;
-  background-image: url(/ecommerce/img/wave.png);
+  background-image: url(/img/wave.png);
   background-size: 100% 100%;
   animation: wave 40s linear infinite;
 }
@@ -219,20 +219,7 @@ div a:hover {
 main {
   background-image: var(--gradientMain);
   background-size: 500%;
-  /* animation: buttons 20s infinite alternate;
-  transition: 3s; */
 }
-
-/* @keyframes buttons {
-  0% {
-    background-position: left;
-  }
-
-  /*por defecto*/
-  /* 100% {
-    background-position: right;
-  }
-} */
 
 div>.imagenPrinc {
   max-width: 100%;
