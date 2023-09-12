@@ -13,7 +13,7 @@ html{
 /* SECCION INICIO */
 .inicio{
     background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url("/Images/imgprog.jpg");
+    url("/ecommerce/Images/imgprog.jpg");
     background-size: cover;
     background-position: center center;
     color: #ffffff;
@@ -183,7 +183,7 @@ img {
     padding: 80px 0 100px 0;
     text-align: center;
     background: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.3)),
-    url("/Images/img-codigo.jpg");
+    url("/ecommerce/Images/img-codigo.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center center;
