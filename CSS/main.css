@@ -278,9 +278,7 @@ section h1:hover {
   color: white;
   background-size: 100%;
   transition: 1s;
-
 }
-
 div .card a:hover {
   background-image: var(--gradient3);
   color: white;
