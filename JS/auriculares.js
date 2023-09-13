@@ -9,7 +9,7 @@ auriculares.forEach((zapas) => {
   let content = document.createElement("div");
   content.className = "animate__animated animate__zoomIn"
   content.innerHTML = `
-  <div class="row">
+  <div class="row mb-5 articulo">
   <div class="divPrinc d-flex align-items-center bg-white col-lg-6 mt-5 ">
   <img class="imagenPrinc m-auto" src="${zapas.imagen1}" alt="">
   </div>

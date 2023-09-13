@@ -18,19 +18,9 @@ navCont.innerHTML = `
       <a class="nav-link active text-light" aria-current="page" href="./nosotros.html">Acerca de Nosotros</a>
     </li>
     <li class="nav-item m-xl-2">
-      <a class="nav-link  text-light " aria-current="page" href="./zapatillas.html"<button class="nav-link active text-light" aria-current="page">Vende en nuesta Web!</button></a>
+      <a class="nav-link  text-light " aria-current="page" href="./admin.html"<button class="nav-link active text-light" aria-current="page">Vende en nuesta Web!</button></a>
     </li>
   </ul>
-  <div class="input-wrapper">
-  <button class="icon"> 
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="25px" width="25px">
-      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z"></path>
-      <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#fff" d="M22 22L20 20"></path>
-    </svg>
-  </button>
-  <input placeholder="search.." class="input" name="text" type="text">
-</div>
-
 </div>`
 navContainer.appendChild(navCont);
 
