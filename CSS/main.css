@@ -90,7 +90,7 @@ a {
 }
 
 nav div div ul li :hover {
-  background-color: #001EE0;
+  background-color: #0086e0af;
   border-radius: 26px;
 }
 
@@ -130,7 +130,7 @@ nav div div ul li :hover {
   width: 100%;
   /* min-height: ; */
   height: 100px;
-  background-image: url(/ecommerce/img/wave.png);
+  background-image: url(/img/wave.png);
   background-size: 100% 100%;
   animation: wave 40s linear infinite;
 }
@@ -239,14 +239,6 @@ section .card {
   text-align: center;
   margin-left: none;
   margin-right: none;
-  /* background-size: 200% 200%;
-    background-image: var(--gradient);
-    animation: colorCh 1s ease-in-out infinite alternate;
-    transition:  1s;
-}
-@keyframes colorCh {
-    0% {background-position: top;}
-    100% {background-position: bottom;} */
 }
 
 section h1 {
@@ -270,7 +262,7 @@ video {
 }
 
 section {
-  background-image: linear-gradient(to bottom, #EFF3F5, #0051ff46, #EFF3F5);
+  background-image: linear-gradient(to bottom, #fff,#bfcddf71, #0051ff46, #fff);
 }
 
 section h1:hover {
@@ -291,15 +283,6 @@ div .card a:hover {
   background-image: var(--gradient3);
   animation: buttons 1s infinite alternate;
 }
-
-/* .cardBody > .card-title {
-    color: white;
-}
-.cardBody> .card-text {
-    color: white;
-}
-.card:hover > .cardBody {
-    opacity: 1; */
 
 .card:hover {
   opacity: 1;
@@ -338,8 +321,6 @@ div .card a:hover {
 .card:hover {
   transform: scale(1.04) rotate(-1deg);
 }
-
-
 
 /* //CSss de MODAL CARRITO // */
 /* modal content */
@@ -469,12 +450,42 @@ div .card a:hover {
     position: fixed;
     left: 78%;
   }
-   /* #navInner ul {
-    margin: 10px ;
-    padding: 0px;
-  } */
-  .input-wrapper {
-    display: none;
-  }
 
 }
+
+.delete-product {
+  cursor: pointer;
+ }
+ .filtro {
+  display: none;
+ }
+ .input-wrapper{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+ }
+ .cantidadCarrito {
+  font-weight:300;
+  font-size: 14px;
+  margin-left: 10px;
+  display: none;
+ }
+ .sumar {
+  cursor: pointer;
+ }
+ .restar {
+  cursor: pointer;
+ }
+@media screen and (max-width:600px) {
+
+.imageFloat img {
+     width: 330px;
+   }
+   .input-wrapper{
+      position: fixed;
+      top: 100px;
+      right: 10px;
+      background-color: blue;
+      border-radius: 25px;
+  }
+};

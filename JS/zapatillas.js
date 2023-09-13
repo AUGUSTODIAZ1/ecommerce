@@ -13,39 +13,33 @@ zapatillas.forEach((zapas) => {
   content.innerHTML = `
   <div class="row mb-5 articulo">
   <div class="divPrinc d-flex align-items-center bg-white col-lg-6 mt-5 ">
+  <div class="divPrinc d-flex align-items-center bg-white col-lg-6 mt-4 ">
   <img class="imagenPrinc m-auto" src="${zapas.imagen1}" alt="">
   </div>
-  <div id="divText" class="mt-5 divSecond col-lg-6 text-center">
-      <h1 class="text-dark text-bold mt-5"> ${zapas.nombre} </h1>
+  <div id="divText" class="mt-4 divSecond col-lg-6 text-center">
+      <h1 class="text-dark text-bold mt-1"> ${zapas.nombre} </h1>
       <p class="text-dark"> ${zapas.descripcion}</p>
       <h5> ${zapas.precio} USD </h5>
       
       <div class="row container align-items-center">
-          <div class="col-lg-5 m-2"> <img class="images" src="${zapas.imagen2}" alt="">
+          <div class="col-lg-5"> <img class="images" src="${zapas.imagen2}" alt="">
           </div>
-          <div class="col-lg-5 m-2"> <img class="images " src="${zapas.imagen3}" alt="">
+          <div class="col-lg-5"> <img class="images " src="${zapas.imagen3}" alt="">
           </div>
-          <div class="col-lg-5 m-2"> <img class="images " src="${zapas.imagen4}" alt="">
+          <div class="col-lg-5"> <img class="images " src="${zapas.imagen4}" alt="">
           </div>
-          <div class="col-lg-5 m-2"> <img class="images " src="${zapas.imagen5}" alt="">
-          </div>
-            
-           
+          <div class="col-lg-5"> <img class="images " src="${zapas.imagen5}" alt="">
           </div>
           </div>
-          
+          </div>
           </div>
           `
   cardContainer.appendChild(content);
-
   let comprar = document.createElement("button");
   comprar.innerText = "Comprar";
   comprar.className = "comprar article mt-2 btn btn-primary";
-
+  comprar.className = "comprar mt-5 mb-4 btn btn-primary";
   content.append(comprar);
-
-
-
   comprar.addEventListener("click", () => {
     const repeat = carrito.some((repeatZapas) => repeatZapas.id === zapas.id);
     if(repeat) {
@@ -68,16 +62,12 @@ zapatillas.forEach((zapas) => {
     saveLocal();
   });
 });
-
       // LOCAL STORAGE
 // set item
 const saveLocal = () => {
   localStorage.setItem("carrito", JSON.stringify(carrito));
 };
 // get item
-
-
-
 // SECCION CARRITO 
 //creacion del modal del carrito
 const pintarCarrito = () => {
@@ -114,8 +104,6 @@ const pintarCarrito = () => {
       <span class="sumar fs-3">+</span>
       <span class="delete-product" fs-3"> ❌ </span>
       <p class="fs-4">Total: ${product.cantidad * product.precio} USD </p>
-
-      
     `;
       // SUMA Y RESTA DE UNIDADES
     modalContainer.append(carritoContent);
@@ -162,7 +150,6 @@ verCarrito.addEventListener("click", pintarCarrito);
 //le asignamos la funcion al boton de eliminar los productos
 const eliminarProducto = (id) => {
   const founId = carrito.find((element) => element.id === id);
-
   carrito = carrito.filter((carritoId) => {
     return carritoId !== founId
   });
@@ -170,7 +157,6 @@ const eliminarProducto = (id) => {
   saveLocal();
   pintarCarrito();
   };
-
 const carritoCounter = () => {
   cantidadCarrito.style.display = "block";
   const carritoLength = carrito.length;
