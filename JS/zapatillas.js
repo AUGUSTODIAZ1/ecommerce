@@ -1,9 +1,7 @@
-
-const cantidadCarrito = document.getElementById("cantidadCarrito")
 const cardContainer = document.getElementById("container")
 const verCarrito = document.getElementById("verCarrito")
 const modalContainer = document.getElementById("modalContainer")
-let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+let carrito = []
 
 //metodo para recorrer el array de los productos
 zapatillas.forEach((zapas) => {
@@ -12,7 +10,6 @@ zapatillas.forEach((zapas) => {
   content.className = "animate__animated animate__zoomIn"
   content.innerHTML = `
   <div class="row mb-5 articulo">
-  <div class="divPrinc d-flex align-items-center bg-white col-lg-6 mt-5 ">
   <div class="divPrinc d-flex align-items-center bg-white col-lg-6 mt-4 ">
   <img class="imagenPrinc m-auto" src="${zapas.imagen1}" alt="">
   </div>
@@ -35,11 +32,15 @@ zapatillas.forEach((zapas) => {
           </div>
           `
   cardContainer.appendChild(content);
+
   let comprar = document.createElement("button");
   comprar.innerText = "Comprar";
-  comprar.className = "comprar article mt-2 btn btn-primary";
   comprar.className = "comprar mt-5 mb-4 btn btn-primary";
+
   content.append(comprar);
+
+
+
   comprar.addEventListener("click", () => {
     const repeat = carrito.some((repeatZapas) => repeatZapas.id === zapas.id);
     if(repeat) {
@@ -58,16 +59,9 @@ zapatillas.forEach((zapas) => {
       });
     }
     console.log(carrito);
-    carritoCounter();
-    saveLocal();
   });
 });
-      // LOCAL STORAGE
-// set item
-const saveLocal = () => {
-  localStorage.setItem("carrito", JSON.stringify(carrito));
-};
-// get item
+
 // SECCION CARRITO 
 //creacion del modal del carrito
 const pintarCarrito = () => {
@@ -98,41 +92,21 @@ const pintarCarrito = () => {
     carritoContent.innerHTML = `
       <img  src="${product.img}">
       <h3 class="fs-6">${product.nombre}</h3>
-      <p class="fs-4">${product.precio} USD</p>
-      <span class="restar fs-3">-</span> 
+      <p>${product.precio} USD</p>
       <p>Cantidad: ${product.cantidad}</p>
-      <span class="sumar fs-3">+</span>
-      <span class="delete-product" fs-3"> ❌ </span>
-      <p class="fs-4">Total: ${product.cantidad * product.precio} USD </p>
+      <p>Total: ${product.cantidad * product.precio} USD </p>
+
+      
     `;
-      // SUMA Y RESTA DE UNIDADES
     modalContainer.append(carritoContent);
-    let restar = carritoContent.querySelector(".restar");
-    restar.addEventListener("click", () => {
-      if (product.cantidad !==1 ){
-        product.cantidad--;
-      }
-      saveLocal();
-      pintarCarrito();
-    })
-    let sumar = carritoContent.querySelector(".sumar");
-    sumar.addEventListener("click", () => {
-      product.cantidad++;
-      saveLocal();
-      pintarCarrito();
-    });
-    let eliminar = carritoContent.querySelector(".delete-product");
-    eliminar.addEventListener("click", () =>{
-       eliminarProducto(product.id);
-    });
-  
+
     //creamos el boton para eliminar los productos
-    // let eliminar = document.createElement("span");
-    // eliminar.innerText = "❌";
-    // eliminar.className = "delete-product";
-    // carritoContent.append(eliminar)
-    // eliminar.addEventListener("click", eliminarProducto);
-  });
+    let eliminar = document.createElement("span");
+    eliminar.innerText = "❌";
+    eliminar.className = "delete-product";
+    carritoContent.append(eliminar)
+    eliminar.addEventListener("click", eliminarProducto);
+  })
   //creamos el footer del modal que lleva el total a pagar
   const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
   
@@ -147,20 +121,14 @@ const pintarCarrito = () => {
 }
 // al boton de carrito de asignamos la funcion de pintar el carrito
 verCarrito.addEventListener("click", pintarCarrito);
+
 //le asignamos la funcion al boton de eliminar los productos
-const eliminarProducto = (id) => {
-  const founId = carrito.find((element) => element.id === id);
+const eliminarProducto = () => {
+  const founId = carrito.find((element) => element.id);
+
   carrito = carrito.filter((carritoId) => {
     return carritoId !== founId
   });
-  carritoCounter();
-  saveLocal();
-  pintarCarrito();
-  };
-const carritoCounter = () => {
-  cantidadCarrito.style.display = "block";
-  const carritoLength = carrito.length;
-  localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
-  cantidadCarrito.innerHTML = JSON.parse(localStorage.getItem("carritoLength"));
+    
+  pintarCarrito()
 };
-carritoCounter();
