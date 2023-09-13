@@ -12,7 +12,7 @@ navCont.innerHTML = `
 <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <li class="nav-item m-xl-2">
-      <a class="nav-link active text-light " aria-current="page" href="./login.html">Cerrar sesion</a>
+      <a class="nav-link active text-light " aria-current="page" href="./index.html">Cerrar sesion</a>
     </li>
     <li class="nav-item m-xl-2">
       <a class="nav-link active text-light" aria-current="page" href="./nosotros.html">Acerca de Nosotros</a>
