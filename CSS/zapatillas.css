@@ -366,6 +366,30 @@ main div img {
 
 /* delete button product */
 .delete-product {
+ nav
+  cursor: pointer;
+}
+.filtro {
+  display: none;
+}
+.input-wrapper{
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+.cantidadCarrito {
+  font-weight:300;
+  font-size: 14px;
+  margin-left: 10px;
+  display: none;
+}
+.sumar {
+  cursor: pointer;
+}
+.restar {
+  cursor: pointer;
+}
+
    cursor: pointer;
   }
   .filtro {
@@ -388,6 +412,7 @@ main div img {
   .restar {
    cursor: pointer;
   }
+
 @media screen and (max-width:600px) {
   .modal-container > .modal-content{
     text-align: center;
@@ -405,6 +430,15 @@ main div img {
       width: 330px;
     }
     .input-wrapper{
+
+      position: fixed;
+      top: 100px;
+      right: 10px;
+      background-color: blue;
+      border-radius: 25px;
+    }
+}   
+
        position: fixed;
        top: 100px;
        right: 10px;
@@ -412,3 +446,4 @@ main div img {
        border-radius: 25px;
    }
 };
+
