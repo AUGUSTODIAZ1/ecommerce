@@ -85,5 +85,5 @@ formulario.addEventListener("submit", (e) => {
   }
   alert(`Bienvenido ${validUser.nombre}`);
   localStorage.setItem('login_success', JSON.stringify(validUser));
-  window.location.href = "./index.html"
+  window.location.href = "./home.html"
 });
