@@ -1,5 +1,0 @@
-// cerrar sesion
-const user = JSON.parse(localStorage.getItem('login_success')) || false
-if (!user) {
-  window.location.href = './index.html'
-}
