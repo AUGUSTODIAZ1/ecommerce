@@ -18,7 +18,7 @@ navCont.innerHTML = `
       <a class="nav-link active text-light" aria-current="page" href="#">Inciar sesion🖊️</a>
     </li>
     <li class="nav-item m-xl-2">
-      <a class="nav-link active text-light" aria-current="page" href="./nosotros.html">Acerca de nosotros😃</a>
+      <button class="nav-link active text-light" id="logout" aria-current="page">Cerrar sesion</button>
     </li>
   </ul>
   <div class="input-wrapper">
