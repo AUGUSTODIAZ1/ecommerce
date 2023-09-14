@@ -27,22 +27,16 @@ auriculares.forEach((zapas) => {
           </div>
           <div class="col-lg-5 m-2"> <img class="images " src="${zapas.imagen5}" alt="">
           </div>
-            
-      
+          <div class="text-center">
+          <button id="btn-comprar" class="comprar mt-5 mb-4 btn btn-primary w-50">Comprar</button>
           </div>
           </div>
-          
+          </div>
           </div>
           `
   cardContainer.appendChild(content);
 
-  let comprar = document.createElement("button");
-  comprar.innerText = "Comprar";
-  comprar.className = "comprar mt-2 btn btn-primary";
-
-  content.append(comprar);
-
-
+  let comprar = content.querySelector("#btn-comprar")
 
   comprar.addEventListener("click", () => {
     const repeat = carrito.some((repeatZapas) => repeatZapas.id === zapas.id);

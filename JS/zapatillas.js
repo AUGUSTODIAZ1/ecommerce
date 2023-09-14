@@ -28,17 +28,15 @@ zapatillas.forEach((zapas) => {
           <div class="col-lg-5"> <img class="images " src="${zapas.imagen5}" alt="">
           </div>
           </div>
+          <div class="text-center">
+          <button id="btn-comprar" class="comprar mt-5 mb-4 btn btn-primary w-50">Comprar</button>
+          </div>
           </div>
           </div>
           `
   cardContainer.appendChild(content);
 
-  let comprar = document.createElement("button");
-  comprar.innerText = "Comprar";
-  comprar.className = "comprar mt-5 mb-4 btn btn-primary";
-
-  content.append(comprar);
-
+  let comprar = content.querySelector("#btn-comprar");
 
 
   comprar.addEventListener("click", () => {
