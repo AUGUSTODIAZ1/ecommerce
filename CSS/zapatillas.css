@@ -412,3 +412,16 @@ main div img {
        border-radius: 25px;
    }
 };
+
+.cantidadCarrito {
+  font-weight:300;
+  font-size: 14px;
+  margin-left: 10px;
+  display: none;
+}
+.sumar {
+  cursor: pointer;
+}
+.restar {
+  cursor: pointer;
+}

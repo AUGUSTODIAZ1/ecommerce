@@ -3,8 +3,7 @@
 const cardContainer = document.getElementById("container")
 const verCarrito = document.getElementById("verCarrito")
 const modalContainer = document.getElementById("modalContainer")
-let carrito = []
-
+let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 //metodo para recorrer el array de los productos
 mouses.forEach((zapas) => {
   //crear cards de los productos e inyectarlas en un div
@@ -40,8 +39,6 @@ mouses.forEach((zapas) => {
 
   let comprar = content.querySelector("#btn-comprar");
 
-
-
   comprar.addEventListener("click", () => {
     const repeat = carrito.some((repeatZapas) => repeatZapas.id === zapas.id);
     if(repeat) {
@@ -60,10 +57,21 @@ mouses.forEach((zapas) => {
       });
     }
     console.log(carrito);
+    carritoCounter();
+    saveLocal();
   });
 });
 
-// SECCION CARRITO
+      // LOCAL STORAGE
+// set item
+const saveLocal = () => {
+  localStorage.setItem("carrito", JSON.stringify(carrito));
+};
+// get item
+
+
+
+// SECCION CARRITO 
 //creacion del modal del carrito
 const pintarCarrito = () => {
   
@@ -93,42 +101,64 @@ const pintarCarrito = () => {
     carritoContent.innerHTML = `
       <img  src="${product.img}">
       <h3 class="fs-6">${product.nombre}</h3>
-      <p>${product.precio} USD</p>
-      <p>Cantidad: ${product.cantidad}</p>
-      <p>Total: ${product.cantidad * product.precio} USD </p>
+      <p class="fs-4">${product.precio} USD</p>
+      <span class="restar fs-3">-</span> 
+      <p class="fs-3">Cantidad: ${product.cantidad}</p>
+      <span class="sumar fs-3">+</span>
+      <p class="fs-4">Total: ${product.cantidad * product.precio} USD </p>
+      <span class="delete-product fs-3"> ✖ </span>
     `;
+      // SUMA Y RESTA DE UNIDADES
     modalContainer.append(carritoContent);
-
-    //creamos el boton para eliminar los productos
-    let eliminar = document.createElement("span");
-    eliminar.innerText = "❌";
-    eliminar.className = "delete-product";
-    carritoContent.append(eliminar)
-    eliminar.addEventListener("click", eliminarProducto);
-  })
+    let restar = carritoContent.querySelector(".restar");
+    restar.addEventListener("click", () => {
+      if (product.cantidad !==1 ){
+        product.cantidad--;
+      }
+      saveLocal();
+      pintarCarrito();
+    })
+    let sumar = carritoContent.querySelector(".sumar");
+    sumar.addEventListener("click", () => {
+      product.cantidad++;
+      saveLocal();
+      pintarCarrito();
+    });
+    let eliminar = carritoContent.querySelector(".delete-product");
+    eliminar.addEventListener("click", () =>{
+       eliminarProducto(product.id);
+    });
+  });
   //creamos el footer del modal que lleva el total a pagar
   const total = carrito.reduce((acc, el) => acc + el.precio * el.cantidad, 0);
   
   const totalBuying = document.createElement("div")
   totalBuying.className = "total-content"
   totalBuying.innerHTML = `
-    Total a pagar: ${total}USD
-    <br>  
+    Total a pagar: ${total}USD  
+    <br>
     <button class="btn btn-primary"> <a href="./error.html" class="text-decoration-none text-light"> Realizar compra </a> </button>
   `
    modalContainer.append(totalBuying) 
 }
 // al boton de carrito de asignamos la funcion de pintar el carrito
 verCarrito.addEventListener("click", pintarCarrito);
-
 //le asignamos la funcion al boton de eliminar los productos
-const eliminarProducto = () => {
-  const founId = carrito.find((element) => element.id);
+const eliminarProducto = (id) => {
+  const founId = carrito.find((element) => element.id === id);
 
   carrito = carrito.filter((carritoId) => {
     return carritoId !== founId
   });
-    
-  pintarCarrito()
-};
+  carritoCounter();
+  saveLocal();
+  pintarCarrito();
+  };
 
+const carritoCounter = () => {
+  cantidadCarrito.style.display = "block";
+  const carritoLength = carrito.length;
+  localStorage.setItem("carritoLength", JSON.stringify(carritoLength))
+  cantidadCarrito.innerHTML = JSON.parse(localStorage.getItem("carritoLength"));
+};
+carritoCounter();
