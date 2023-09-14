@@ -93,10 +93,10 @@ const pintarCarrito = () => {
     carritoContent.className = "modal-content animate__animated animate__zoomIn"
     carritoContent.innerHTML = `
       <img  src="${product.img}">
-      <h3 class="fs-6">${product.nombre}</h3>
-      <p class="fs-4">${product.precio} USD</p>
+      <h3 class="fs-4">${product.nombre}</h3>
+      <p class="fs-3">${product.precio} USD</p>
       <span class="restar fs-3">-</span> 
-      <p class="fs-3">Cantidad: ${product.cantidad}</p>
+      <p class="fs-4">Cantidad: ${product.cantidad}</p>
       <span class="sumar fs-3">+</span>
       <p class="fs-4">Total: ${product.cantidad * product.precio} USD </p>
       <span class="delete-product fs-3"> ✖ </span>
