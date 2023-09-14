@@ -84,6 +84,6 @@ formulario.addEventListener("submit", (e) => {
     return alert('Usuario y/o contraseña incorrectos!')
   }
   alert(`Bienvenido ${validUser?.nombre}`);
-  localStorage.setItem('login_success', JSON.stringify(validUser));
+  localStorage.setItem('users', JSON.stringify(validUser));
   window.location.href = "./home.html"
 });
