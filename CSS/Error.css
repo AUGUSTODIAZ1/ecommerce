@@ -1,5 +1,5 @@
 * {
-  background-color: black;
+  /* background-color: black; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,14 +8,14 @@
 
 .page_404 {
   padding: 40px 0;
-  background: #000000;
   font-family: "poppins";
 }
 
 .bg {
-  background: url(/Images/error-ecomm.gif);
-  height: 500px;
-  background-position: center;
+  background: url(/Images/error404444.avif);
+  height: 580px;
+  background-position: center center;
+  background-size: cover;
 }
 
 /* voton volver */
@@ -24,16 +24,17 @@ button,button::after {
   font-size: 20px;
   border: none;
   border-radius: 5px;
-  color: white;
+  font-size: bold;
+  color: rgb(53, 42, 42);
   background-color: transparent;
   position: relative;
 }
 p {
-  color: #c5c0c0;
+  color: #1b1b29;
 }
 
 .h2 {
-  color: #c5c0c0;
+  color: #161c29de;
   font-size: 40px;
 }
 button::after {
